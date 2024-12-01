@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  horse-racing-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    container_name: horse-racing-app-container
+    restart: always
+    env_file:
+      - .env
